@@ -1,13 +1,58 @@
-@import "~bootstrap/scss/bootstrap.scss";
-
 body {
   background: rgb(11, 146, 40);
+  box-sizing: border-box;
 }
 
 .card {
   background-color: rgb(253, 253, 253);
   width: 350px;
-  height: 500px;
-  padding-top: 100px;
-  margin: auto;
+  height: 370px;
+  border-radius: 20px;
+  border-right: 3px solid black;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 150px;
+  font-size: 170px;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 82px;
+  }
+
+  &:after {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 82px;
+    transform: rotate(-180deg);
+  }
+
+  &.heart:before,
+  &.heart:after {
+    content: "\2665";
+    color: red;
+  }
+
+  &.diamond:before,
+  &.diamond:after {
+    content: "\2666";
+    color: red;
+  }
+
+  &.spade:before,
+  &.spade:after {
+    content: "\2660";
+    color: black;
+  }
+
+  &.club:before,
+  &.club:after {
+    content: "\2663";
+    color: black;
+  }
 }
